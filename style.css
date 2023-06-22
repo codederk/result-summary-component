@@ -1,0 +1,255 @@
+/* Challenge by Frontend Mentor. */
+/* Coded by Sudiarta I Kadek. */
+
+:root {
+  /* Primary Color */
+  --color-light-red: hsl(0, 100%, 67%);
+  --color-orange-yellow: hsl(39, 100%, 56%);
+  --color-green-teal: hsl(166, 100%, 37%);
+  --color-cobalt-blue: hsl(234, 85%, 45%);
+  /* Neutral Color */
+  --color-white: hsl(0, 0%, 100%);
+  --color-pale-blue: hsl(221, 100%, 96%);
+  --color-light-lavender: hsl(241, 100%, 89%);
+  --color-dark-gray-blue: hsl(224, 30%, 27%);
+  /* Gradient Color */
+  --color-light-slate-blue: hsl(252, 100%, 67%);
+  --color-light-royal-blue: hsl(241, 81%, 54%);
+  --color-violet-blue: hsla(256, 72%, 46%, 1);
+  --color-persian-blue: hsla(241, 72%, 46%, 0);
+
+  --body-font-size: 1rem;
+  --body-font-weight: 500;
+  --body-line-height: 1.5;
+  --body-font-family: "Hanken Grotesk", sans-serif;
+  --border-radius-sm: 0.5rem;
+  --border-radius-lg: 2rem;
+  --box-shadow: 0 10px 30px hsla(234, 85%, 45%, 0.2);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  font-family: var(--body-font-family);
+  background-color: var(--color-pale-blue);
+  /* Flexbox */
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 756px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 756px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 756px) {
+  p {
+    font-size: 18px;
+  }
+}
+
+button {
+  border: none;
+  font-size: 1.25rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+  background-color: var(--color-white);
+}
+
+@media screen and (min-width: 756px) {
+  .card {
+    flex-direction: row;
+    max-width: 740px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+  }
+}
+
+.card__result {
+  background-image: linear-gradient(var(--color-light-slate-blue), var(--color-light-royal-blue));
+  border-radius: 0 0 2rem 2rem;
+  text-align: center;
+  padding: 2rem 2.5rem 3rem;
+  color: var(--color-white);
+}
+
+@media screen and (min-width: 756px) {
+  .card__result {
+    width: 50%;
+    border-radius: var(--border-radius-lg);
+    padding: 3rem 3.75rem;
+  }
+}
+
+.circle__point {
+  background-image: linear-gradient(var(--color-violet-blue), var(--color-persian-blue));
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 2rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 756px) {
+  .circle__point {
+    width: 200px;
+    height: 200px;
+    margin: 2.5rem auto 2rem;
+  }
+}
+
+.total__point {
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 756px) {
+  .total__point {
+    font-size: 5rem;
+  }
+}
+
+.card__summary {
+  padding:1.75rem 2rem;
+}
+
+@media screen and (min-width: 756px) {
+  .card__summary {
+    width: 50%;
+    padding: 3rem 2.5rem;
+  }
+}
+
+.card__summary__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.panel__reaction {
+  color: var(--color-light-red);
+  background-color: hsla(0, 100%, 67%, 0.1);
+  border-radius: var(--border-radius-sm);
+}
+.panel__memory {
+  color: var(--color-orange-yellow);
+  background-color: hsla(39, 100%, 56%, 0.1);
+  border-radius: var(--border-radius-sm);
+}
+.panel__verbal {
+  color: var(--color-green-teal);
+  background-color: hsla(166, 100%, 37%, 0.1);
+  border-radius: var(--border-radius-sm);
+}
+.panel__visual {
+  color: var(--color-cobalt-blue);
+  background-color: hsla(234, 85%, 45%, 0.1);
+  border-radius: var(--border-radius-sm);
+}
+
+
+.label {
+  display: flex;
+  gap: 0.5rem;
+}
+
+
+.target__point {
+  color: hsla(224, 30%, 27%, 0.5);
+}
+
+.reached__point {
+  color: var(--color-dark-gray-blue);
+  font-weight: 700;
+}
+
+.button__continue {
+  background-color: var(--color-dark-gray-blue);
+  border-radius: 2rem;
+  color: var(--color-white);
+  padding: 1rem;
+  margin-top: 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 756px) {
+  .button__continue {
+      margin-top: 1.75rem;
+    }
+  }
+
+.button__continue:hover {
+  background-image: linear-gradient(var(--color-light-slate-blue), var(--color-light-royal-blue));
+}
+
+
+
+.text__light {
+  color: var(--color-light-lavender);
+}
+
+.text__white {
+  color: var(--color-white);
+}
+
+.text__dark {
+  color: var(--color-dark-gray-blue);
+}
+
+

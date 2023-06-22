@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+
+</head>
+<body>
+
+  <div class="card">
+    <div class="card__result">
+      <h2>Your Result</h2>
+      <div class="circle__point">
+        <p class="total__point">76</p>
+        <p class="text__light">of 100</p>
+      </div>
+      <h1>Great</h1>
+      <p class="card__result__description text__light">You scored higher than 65% of the people who have taken these tests.</p>
+    </div>
+    <div class="card__summary">
+      <h2 class="color-dark">Summary</h2>
+      <div class="card__summary__panel">
+
+        <div class="panel panel__reaction">
+          <div class="label ">
+            <object data="./assets/images/icon-reaction.svg"></object>
+            <p>Reaction</p>
+          </div> 
+          <p class="target__point"><span class="reached__point">80</span> / 100</p>
+        </div>
+
+        <div class="panel panel__memory">
+          <div class="label ">
+            <object data="./assets/images/icon-memory.svg"></object>
+            <p>Memory</p>
+          </div> 
+          <p class="target__point"><span class="reached__point">92</span> / 100</p>
+        </div>
+
+        <div class="panel panel__verbal">
+          <div class="label ">
+            <object data="./assets/images/icon-verbal.svg"></object>
+            <p>Verbal</p>
+          </div> 
+          <p class="target__point"><span class="reached__point">61</span> / 100</p>
+        </div>
+
+        <div class="panel panel__visual">
+          <div class="label ">
+            <object data="./assets/images/icon-visual.svg"></object>
+            <p>Visual</p>
+          </div> 
+          <p class="target__point"><span class="reached__point">72</span> / 100</p>
+        </div>
+
+        <button class="button__continue">Continue</button>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
